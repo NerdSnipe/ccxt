@@ -1644,7 +1644,7 @@ func  (this *HyperliquidCore) HandleBuilderFeeApproval() <- chan interface{} {
             return nil
         }
         
-            {
+            {		
                  func(this *HyperliquidCore) (ret_ interface{}) {
         		    defer func() {
                         if e := recover(); e != nil {

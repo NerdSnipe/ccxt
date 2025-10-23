@@ -1878,7 +1878,7 @@ func  (this *BitvavoCore) HandleErrorMessage(client interface{}, message interfa
     var messageHash interface{} = this.SafeString(message, "requestId", buildMessage)
     var rejected interface{} = false
     
-        {
+        {		
              func(this *BitvavoCore) (ret_ interface{}) {
     		    defer func() {
                     if e := recover(); e != nil {

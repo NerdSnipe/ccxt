@@ -1733,7 +1733,7 @@ func  (this *CoincatchCore) HandleErrorMessage(client interface{}, message inter
     //
     var event interface{} = this.SafeString(message, "event")
     
-        {
+        {		
             ret__ := func(this *CoincatchCore) (ret_ interface{}) {
     		    defer func() {
                     if e := recover(); e != nil {

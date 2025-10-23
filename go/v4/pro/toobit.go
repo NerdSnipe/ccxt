@@ -1387,7 +1387,7 @@ func  (this *ToobitCore) Authenticate(optionalArgs ...interface{}) <- chan inter
                 var delay interface{} = this.Sum(listenKeyRefreshRate, 10000)
                 if ccxt.IsTrue(ccxt.IsGreaterThan(ccxt.Subtract(time, lastAuthenticatedTime), delay)) {
                     
-                        {
+                        {		
                              func(this *ToobitCore) (ret_ interface{}) {
                     		    defer func() {
                                     if e := recover(); e != nil {
@@ -1443,7 +1443,7 @@ func  (this *ToobitCore) KeepAliveListenKey(optionalArgs ...interface{}) <- chan
                 return nil
             }
             
-                {
+                {		
                      func(this *ToobitCore) (ret_ interface{}) {
             		    defer func() {
                             if error := recover(); error != nil {

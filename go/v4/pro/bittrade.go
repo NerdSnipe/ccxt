@@ -429,7 +429,7 @@ func  (this *BittradeCore) WatchOrderBookSnapshot(client interface{}, message in
                 defer ccxt.ReturnPanicError(ch)
                     var messageHash interface{} = this.SafeString(subscription, "messageHash")
             
-                {
+                {		
                      func(this *BittradeCore) (ret_ interface{}) {
             		    defer func() {
                             if e := recover(); e != nil {
@@ -689,7 +689,7 @@ func  (this *BittradeCore) HandleErrorMessage(client interface{}, message interf
         if ccxt.IsTrue(!ccxt.IsEqual(subscription, nil)) {
             var errorCode interface{} = this.SafeString(message, "err-code")
             
-                {
+                {		
                      func(this *BittradeCore) (ret_ interface{}) {
             		    defer func() {
                             if e := recover(); e != nil {

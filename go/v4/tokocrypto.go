@@ -2928,7 +2928,7 @@ func  (this *TokocryptoCore) HandleErrors(code interface{}, reason interface{}, 
         var parsedMessage interface{} = nil
         if IsTrue(!IsEqual(messageInner, nil)) {
             
-                {
+                {		
                      func(this *TokocryptoCore) (ret_ interface{}) {
             		    defer func() {
                             if e := recover(); e != nil {

@@ -693,7 +693,7 @@ func  (this *WavesexchangeCore) CheckRequiredKeys() interface{}  {
     var apiKeyBytes interface{} = nil
     var secretKeyBytes interface{} = nil
     
-        {
+        {		
              func(this *WavesexchangeCore) (ret_ interface{}) {
     		    defer func() {
                     if e := recover(); e != nil {
@@ -714,7 +714,7 @@ func  (this *WavesexchangeCore) CheckRequiredKeys() interface{}  {
         
             }
     
-        {
+        {		
              func(this *WavesexchangeCore) (ret_ interface{}) {
     		    defer func() {
                     if e := recover(); e != nil {

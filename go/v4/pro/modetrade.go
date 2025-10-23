@@ -1499,7 +1499,7 @@ func  (this *ModetradeCore) HandleErrorMessage(client interface{}, message inter
     }
     var errorMessage interface{} = this.SafeString(message, "errorMsg")
     
-        {
+        {		
             ret__ := func(this *ModetradeCore) (ret_ interface{}) {
     		    defer func() {
                     if error := recover(); error != nil {

@@ -2819,7 +2819,7 @@ func  (this *KrakenCore) CancelOrder(id interface{}, optionalArgs ...interface{}
                 request = this.Omit(request, "txid")
             }
             
-                {
+                {		
                      func(this *KrakenCore) (ret_ interface{}) {
             		    defer func() {
                             if e := recover(); e != nil {

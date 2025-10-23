@@ -1725,7 +1725,7 @@ func  (this *CexCore) HandleConnected(client interface{}, message interface{}) i
 }
 func  (this *CexCore) HandleErrorMessage(client interface{}, message interface{}) interface{}  {
     
-        {
+        {		
             ret__ := func(this *CexCore) (ret_ interface{}) {
     		    defer func() {
                     if error := recover(); error != nil {

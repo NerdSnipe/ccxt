@@ -4818,7 +4818,7 @@ func  (this *KucoinCore) ParseLedgerEntry(item interface{}, optionalArgs ...inte
     var referenceId interface{} = nil
     if IsTrue(IsTrue(!IsEqual(context, nil)) && IsTrue(!IsEqual(context, ""))) {
         
-            {
+            {		
                  func(this *KucoinCore) (ret_ interface{}) {
         		    defer func() {
                         if exc := recover(); exc != nil {

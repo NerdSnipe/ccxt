@@ -1708,7 +1708,7 @@ func  (this *BackpackCore) HandleErrorMessage(client interface{}, message interf
     var error interface{} = this.SafeDict(message, "error", map[string]interface{} {})
     var code interface{} = this.SafeInteger(error, "code")
     
-        {
+        {		
              func(this *BackpackCore) (ret_ interface{}) {
     		    defer func() {
                     if e := recover(); e != nil {

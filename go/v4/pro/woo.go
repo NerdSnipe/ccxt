@@ -279,7 +279,7 @@ func  (this *WooCore) HandleOrderBook(client interface{}, message interface{})  
             ccxt.AppendToArray(orderbook.(ccxt.OrderBookInterface).GetCache(), message)
         } else {
             
-                {
+                {		
                      func(this *WooCore) (ret_ interface{}) {
             		    defer func() {
                             if e := recover(); e != nil {
@@ -338,7 +338,7 @@ func  (this *WooCore) FetchOrderBookSnapshot(client interface{}, message interfa
                     var symbol interface{} = this.SafeString(subscription, "symbol")
             var messageHash interface{} = this.SafeString(message, "topic")
             
-                {
+                {		
                      func(this *WooCore) (ret_ interface{}) {
             		    defer func() {
                             if e := recover(); e != nil {
@@ -1819,7 +1819,7 @@ func  (this *WooCore) HandleErrorMessage(client interface{}, message interface{}
     }
     var errorMessage interface{} = this.SafeString(message, "errorMsg")
     
-        {
+        {		
             ret__ := func(this *WooCore) (ret_ interface{}) {
     		    defer func() {
                     if error := recover(); error != nil {

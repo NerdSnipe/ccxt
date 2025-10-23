@@ -3467,7 +3467,7 @@ func  (this *PhemexCore) FetchOpenOrders(optionalArgs ...interface{}) <- chan in
             }
             var response interface{} = nil
             
-                {
+                {		
                      func(this *PhemexCore) (ret_ interface{}) {
             		    defer func() {
                             if e := recover(); e != nil {

@@ -31,21 +31,21 @@ import "fmt"
                 var ends interface{} = Add(now, 10000)
                 for IsLessThan(now, ends) {
                     
-                        {
-                             func() (ret_ interface{}) {
+                        {		
+                             func(this *undefined) (ret_ interface{}) {
                     		    defer func() {
                                     if e := recover(); e != nil {
                                         if e == "break" {
                                             return
                                         }
-                                        ret_ = func() interface{} {
+                                        ret_ = func(this *undefined) interface{} {
                                             // catch block:
                                                         if !IsTrue((IsInstance(e, NetworkError))) {
                                     panic(e)
                                 }
                                 now = DateNow()
                                             return nil
-                                        }()
+                                        }(this)
                                     }
                                 }()
                     		    // try block:
@@ -61,7 +61,7 @@ import "fmt"
                                     TestLiquidation(exchange, skippedProperties, method, GetValue(response, i), symbol)
                                 }
                     		    return nil
-                    	    }()
+                    	    }(this)
                         
                             }
                 }

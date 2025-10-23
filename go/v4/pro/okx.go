@@ -2939,7 +2939,7 @@ func  (this *OkxCore) HandleErrorMessage(client interface{}, message interface{}
     //
     var errorCode interface{} = this.SafeString(message, "code")
     
-        {
+        {		
              func(this *OkxCore) (ret_ interface{}) {
     		    defer func() {
                     if e := recover(); e != nil {

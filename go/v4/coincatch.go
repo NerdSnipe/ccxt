@@ -6006,7 +6006,7 @@ func  (this *CoincatchCore) SafeMarketCustom(marketId interface{}, optionalArgs 
     settleId := GetArg(optionalArgs, 1, nil)
     _ = settleId
     
-        {
+        {		
              func(this *CoincatchCore) (ret_ interface{}) {
     		    defer func() {
                     if e := recover(); e != nil {

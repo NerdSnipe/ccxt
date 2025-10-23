@@ -95,6 +95,10 @@ func DynamicallyCreateInstance(exchangeId string, exchangeArgs map[string]interf
         blofinItf := NewBlofinCore()
         blofinItf.Init(exchangeArgs)
         return blofinItf, true
+    case "btse":
+        btseItf := NewBtseCore()
+        btseItf.Init(exchangeArgs)
+        return btseItf, true
     case "bybit":
         bybitItf := NewBybitCore()
         bybitItf.Init(exchangeArgs)

@@ -1272,7 +1272,7 @@ func  (this *Exchange) FetchRestOrderBookSafe(symbol interface{}, optionalArgs .
             var fetchSnapshotMaxRetries interface{} = this.HandleOption("watchOrderBook", "maxRetries", 3)
             for i := 0; IsLessThan(i, fetchSnapshotMaxRetries); i++ {
                 
-                    {
+                    {		
                          func(this *Exchange) (ret_ interface{}) {
                 		    defer func() {
                                 if e := recover(); e != nil {
@@ -3530,7 +3530,7 @@ func  (this *Exchange) FetchWebEndpoint(method interface{}, endpointMethod inter
             var options interface{} = this.SafeValue(this.Options, method, map[string]interface{} {})
             var muteOnFailure interface{} = this.SafeBool(options, "webApiMuteFailure", true)
             
-                {
+                {		
                      func(this *Exchange) (ret_ interface{}) {
             		    defer func() {
                             if e := recover(); e != nil {
@@ -3556,7 +3556,7 @@ func  (this *Exchange) FetchWebEndpoint(method interface{}, endpointMethod inter
                     var shouldBreak interface{} = false
                     for IsLessThan(retry, maxRetries) {
                         
-                            {
+                            {		
                                  func(this *Exchange) (ret_ interface{}) {
                         		    defer func() {
                                         if e := recover(); e != nil {
@@ -4446,7 +4446,7 @@ func  (this *Exchange) Fetch2(path interface{}, optionalArgs ...interface{}) <- 
             this.Last_request_url = GetValue(request, "url")
             for i := 0; IsLessThan(i, Add(retries, 1)); i++ {
                 
-                    {
+                    {		
                          func(this *Exchange) (ret_ interface{}) {
                 		    defer func() {
                                 if e := recover(); e != nil {
@@ -8999,7 +8999,7 @@ func  (this *Exchange) FetchPaginatedCallDynamic(method interface{}, optionalArg
             for (IsLessThan(calls, maxCalls)) {
                 calls = Add(calls, 1)
                 
-                    {
+                    {		
                          func(this *Exchange) (ret_ interface{}) {
                 		    defer func() {
                                 if e := recover(); e != nil {
@@ -9107,7 +9107,7 @@ func  (this *Exchange) SafeDeterministicCall(method interface{}, optionalArgs ..
             var errors interface{} = 0
             for IsLessThanOrEqual(errors, maxRetries) {
                 
-                    {
+                    {		
                          func(this *Exchange) (ret_ interface{}) {
                 		    defer func() {
                                 if e := recover(); e != nil {
@@ -9260,7 +9260,7 @@ func  (this *Exchange) FetchPaginatedCallCursor(method interface{}, optionalArgs
             params = this.Omit(params, "timeframe") // reading the timeframe from the method arguments to avoid changing the signature
             for IsLessThan(i, maxCalls) {
                 
-                    {
+                    {		
                          func(this *Exchange) (ret_ interface{}) {
                 		    defer func() {
                                 if e := recover(); e != nil {
@@ -9382,7 +9382,7 @@ func  (this *Exchange) FetchPaginatedCallIncremental(method interface{}, optiona
             var result interface{} = []interface{}{}
             for IsLessThan(i, maxCalls) {
                 
-                    {
+                    {		
                          func(this *Exchange) (ret_ interface{}) {
                 		    defer func() {
                                 if e := recover(); e != nil {

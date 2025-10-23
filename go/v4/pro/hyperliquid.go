@@ -1253,7 +1253,7 @@ func  (this *HyperliquidCore) HandleErrorMessage(client interface{}, message int
         return true
     }
     
-        {
+        {		
              func(this *HyperliquidCore) (ret_ interface{}) {
     		    defer func() {
                     if e := recover(); e != nil {

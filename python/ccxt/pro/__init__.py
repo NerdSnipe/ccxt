@@ -79,6 +79,7 @@ from ccxt.pro.bittrade import bittrade                                    # noqa
 from ccxt.pro.bitvavo import bitvavo                                      # noqa: F401
 from ccxt.pro.blockchaincom import blockchaincom                          # noqa: F401
 from ccxt.pro.blofin import blofin                                        # noqa: F401
+from ccxt.pro.btse import btse                                            # noqa: F401
 from ccxt.pro.bybit import bybit                                          # noqa: F401
 from ccxt.pro.cex import cex                                              # noqa: F401
 from ccxt.pro.coinbase import coinbase                                    # noqa: F401
@@ -153,6 +154,7 @@ exchanges = [
     'bitvavo',
     'blockchaincom',
     'blofin',
+    'btse',
     'bybit',
     'cex',
     'coinbase',

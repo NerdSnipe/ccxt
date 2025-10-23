@@ -1,0 +1,25 @@
+from ccxt.base.types import Entry
+
+
+class ImplicitAPI:
+    public_get_api_v2_3_market_summary = publicGetApiV23MarketSummary = Entry('api/v2.3/market_summary', 'public', 'GET', {})
+    public_get_api_v2_3_ohlcv = publicGetApiV23Ohlcv = Entry('api/v2.3/ohlcv', 'public', 'GET', {})
+    public_get_api_v2_3_price = publicGetApiV23Price = Entry('api/v2.3/price', 'public', 'GET', {})
+    public_get_api_v2_3_orderbook = publicGetApiV23Orderbook = Entry('api/v2.3/orderbook', 'public', 'GET', {})
+    public_get_api_v2_3_trades = publicGetApiV23Trades = Entry('api/v2.3/trades', 'public', 'GET', {})
+    publicspot_get_api_v3_2_market_summary = publicSpotGetApiV32MarketSummary = Entry('api/v3.2/market_summary', 'publicSpot', 'GET', {})
+    publicspot_get_api_v3_2_ohlcv = publicSpotGetApiV32Ohlcv = Entry('api/v3.2/ohlcv', 'publicSpot', 'GET', {})
+    publicspot_get_api_v3_2_price = publicSpotGetApiV32Price = Entry('api/v3.2/price', 'publicSpot', 'GET', {})
+    publicspot_get_api_v3_2_orderbook_l2 = publicSpotGetApiV32OrderbookL2 = Entry('api/v3.2/orderbook/L2', 'publicSpot', 'GET', {})
+    publicspot_get_api_v3_2_trades = publicSpotGetApiV32Trades = Entry('api/v3.2/trades', 'publicSpot', 'GET', {})
+    private_get_api_v2_3_user_wallet = privateGetApiV23UserWallet = Entry('api/v2.3/user/wallet', 'private', 'GET', {})
+    private_get_api_v2_3_user_wallet_history = privateGetApiV23UserWalletHistory = Entry('api/v2.3/user/wallet_history', 'private', 'GET', {})
+    private_get_api_v2_3_user_open_orders = privateGetApiV23UserOpenOrders = Entry('api/v2.3/user/open_orders', 'private', 'GET', {})
+    private_get_api_v2_3_user_positions = privateGetApiV23UserPositions = Entry('api/v2.3/user/positions', 'private', 'GET', {})
+    private_get_api_v2_3_user_trade_history = privateGetApiV23UserTradeHistory = Entry('api/v2.3/user/trade_history', 'private', 'GET', {})
+    private_post_api_v2_3_order = privatePostApiV23Order = Entry('api/v2.3/order', 'private', 'POST', {})
+    private_post_api_v2_3_user_wallet_transfer = privatePostApiV23UserWalletTransfer = Entry('api/v2.3/user/wallet/transfer', 'private', 'POST', {})
+    private_post_api_v2_3_leverage = privatePostApiV23Leverage = Entry('api/v2.3/leverage', 'private', 'POST', {})
+    private_post_api_v2_3_position_mode = privatePostApiV23PositionMode = Entry('api/v2.3/position_mode', 'private', 'POST', {})
+    private_put_api_v2_3_order = privatePutApiV23Order = Entry('api/v2.3/order', 'private', 'PUT', {})
+    private_delete_api_v2_3_order = privateDeleteApiV23Order = Entry('api/v2.3/order', 'private', 'DELETE', {})

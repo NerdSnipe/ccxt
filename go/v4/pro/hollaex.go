@@ -588,7 +588,7 @@ func  (this *HollaexCore) HandleErrorMessage(client interface{}, message interfa
     //
     var error interface{} = this.SafeInteger(message, "error")
     
-        {
+        {		
              func(this *HollaexCore) (ret_ interface{}) {
     		    defer func() {
                     if e := recover(); e != nil {

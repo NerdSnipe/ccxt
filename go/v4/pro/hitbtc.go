@@ -1688,7 +1688,7 @@ func  (this *HitbtcCore) HandleError(client interface{}, message interface{}) in
     var error interface{} = this.SafeValue(message, "error")
     if ccxt.IsTrue(!ccxt.IsEqual(error, nil)) {
         
-            {
+            {		
                  func(this *HitbtcCore) (ret_ interface{}) {
         		    defer func() {
                         if e := recover(); e != nil {

@@ -1852,7 +1852,7 @@ func  (this *BitmartCore) HandleErrorMessage(client interface{}, message interfa
     var errorCode interface{} = this.SafeString(message, "errorCode")
     var error interface{} = this.SafeString(message, "error")
     
-        {
+        {		
             ret__ := func(this *BitmartCore) (ret_ interface{}) {
     		    defer func() {
                     if e := recover(); e != nil {

@@ -642,7 +642,7 @@ func  (this *HtxCore) HandleOrderBookSnapshot(client interface{}, message interf
     var id interface{} = this.SafeString(message, "id")
     var lastTimestamp interface{} = this.SafeInteger(subscription, "lastTimestamp")
     
-        {
+        {		
              func(this *HtxCore) (ret_ interface{}) {
     		    defer func() {
                     if e := recover(); e != nil {
@@ -735,7 +735,7 @@ func  (this *HtxCore) WatchOrderBookSnapshot(client interface{}, message interfa
                 "method": this.HandleOrderBookSnapshot,
             }
             
-                {
+                {		
                      func(this *HtxCore) (ret_ interface{}) {
             		    defer func() {
                             if e := recover(); e != nil {
@@ -2264,7 +2264,7 @@ func  (this *HtxCore) Pong(client interface{}, message interface{}) <- chan inte
                 defer close(ch)
                 defer ccxt.ReturnPanicError(ch)
                     
-                {
+                {		
                      func(this *HtxCore) (ret_ interface{}) {
             		    defer func() {
                             if e := recover(); e != nil {
@@ -2390,7 +2390,7 @@ func  (this *HtxCore) HandleErrorMessage(client interface{}, message interface{}
         if ccxt.IsTrue(!ccxt.IsEqual(subscription, nil)) {
             var errorCode interface{} = this.SafeString(message, "err-code")
             
-                {
+                {		
                      func(this *HtxCore) (ret_ interface{}) {
             		    defer func() {
                             if e := recover(); e != nil {
@@ -2423,7 +2423,7 @@ func  (this *HtxCore) HandleErrorMessage(client interface{}, message interface{}
     if ccxt.IsTrue(ccxt.IsTrue(!ccxt.IsEqual(code, nil)) && ccxt.IsTrue((ccxt.IsTrue((!ccxt.IsEqual(code, "200"))) && ccxt.IsTrue((!ccxt.IsEqual(code, "0")))))) {
         var feedback interface{} = ccxt.Add(ccxt.Add(this.Id, " "), this.Json(message))
         
-            {
+            {		
                  func(this *HtxCore) (ret_ interface{}) {
         		    defer func() {
                         if e := recover(); e != nil {

@@ -999,7 +999,7 @@ func  (this *BinanceCore) FetchOrderBookSnapshot(client interface{}, message int
                     var symbol interface{} = this.SafeString(subscription, "symbol")
             var messageHash interface{} = ccxt.Add("orderbook::", symbol)
             
-                {
+                {		
                      func(this *BinanceCore) (ret_ interface{}) {
             		    defer func() {
                             if e := recover(); e != nil {
@@ -1132,7 +1132,7 @@ func  (this *BinanceCore) HandleOrderBook(client interface{}, message interface{
         ccxt.AppendToArray(orderbook.(ccxt.OrderBookInterface).GetCache(), message)
     } else {
         
-            {
+            {		
                  func(this *BinanceCore) (ret_ interface{}) {
         		    defer func() {
                         if e := recover(); e != nil {
@@ -3061,7 +3061,7 @@ func  (this *BinanceCore) KeepAliveListenKey(optionalArgs ...interface{}) <- cha
             params = this.Omit(params, []interface{}{"type", "symbol"})
             var time interface{} = this.Milliseconds()
             
-                {
+                {		
                      func(this *BinanceCore) (ret_ interface{}) {
             		    defer func() {
                             if error := recover(); error != nil {
@@ -5375,7 +5375,7 @@ func  (this *BinanceCore) HandleWsError(client interface{}, message interface{})
     var code interface{} = this.SafeInteger(error, "code")
     var msg interface{} = this.SafeString(error, "msg")
     
-        {
+        {		
              func(this *BinanceCore) (ret_ interface{}) {
     		    defer func() {
                     if e := recover(); e != nil {

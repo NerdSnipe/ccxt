@@ -1546,7 +1546,7 @@ func  (this *PoloniexCore) HandleErrorMessage(client interface{}, message interf
     var orderId interface{} = this.SafeString(first, "orderId")
     if ccxt.IsTrue(ccxt.IsTrue((ccxt.IsEqual(event, "error"))) || ccxt.IsTrue((ccxt.IsEqual(orderId, "0")))) {
         
-            {
+            {		
                 ret__ := func(this *PoloniexCore) (ret_ interface{}) {
         		    defer func() {
                         if e := recover(); e != nil {

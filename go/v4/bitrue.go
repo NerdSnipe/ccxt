@@ -3669,7 +3669,7 @@ func  (this *BitrueCore) HandleErrors(code interface{}, reason interface{}, url 
         var parsedMessage interface{} = nil
         if IsTrue(!IsEqual(messageInner, nil)) {
             
-                {
+                {		
                      func(this *BitrueCore) (ret_ interface{}) {
             		    defer func() {
                             if e := recover(); e != nil {

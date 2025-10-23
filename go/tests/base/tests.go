@@ -56,7 +56,7 @@ func  (this *testMainClass) Init(exchangeId interface{}, symbolArgv interface{},
                 defer close(ch)
                 defer ReturnPanicError(ch)
                     
-                {
+                {		
                      func(this *testMainClass) (ret_ interface{}) {
             		    defer func() {
                             if e := recover(); e != nil {
@@ -431,7 +431,7 @@ func  (this *testMainClass) TestSafe(methodName interface{}, exchange ccxt.ICore
             var argsStringified interface{} = exchange.Json(args) // args.join() breaks when we provide a list of symbols or multidimensional array; "args.toString()" breaks bcz of "array to string conversion"
             for i := 0; IsLessThan(i, maxRetries); i++ {
                 
-                    {
+                    {		
                          func(this *testMainClass) (ret_ interface{}) {
                 		    defer func() {
                                 if ex := recover(); ex != nil {
@@ -937,7 +937,7 @@ func  (this *testMainClass) TestProxies(exchange ccxt.ICoreExchange) <- chan int
             var exception interface{} = nil
             for j := 0; IsLessThan(j, maxRetries); j++ {
                 
-                    {
+                    {		
                          func(this *testMainClass) (ret_ interface{}) {
                 		    defer func() {
                                 if e := recover(); e != nil {
@@ -1036,7 +1036,7 @@ func  (this *testMainClass) StartTest(exchange ccxt.ICoreExchange, symbol interf
                 exchange.SetSandboxMode(true)
             }
             
-                {
+                {		
                      func(this *testMainClass) (ret_ interface{}) {
             		    defer func() {
                             if e := recover(); e != nil {
@@ -1253,7 +1253,7 @@ func  (this *testMainClass) AssertNewAndStoredOutputInner(exchange ccxt.ICoreExc
                     // tmp c# number comparsion
                     var isNumber interface{} = false
                     
-                        {
+                        {		
                              func(this *testMainClass) (ret_ interface{}) {
                     		    defer func() {
                                     if e := recover(); e != nil {
@@ -1308,7 +1308,7 @@ func  (this *testMainClass) AssertNewAndStoredOutput(exchange ccxt.ICoreExchange
     _ = assertingKey
     var res interface{} = true
     
-        {
+        {		
              func(this *testMainClass) (ret_ interface{}) {
     		    defer func() {
                     if e := recover(); e != nil {
@@ -1425,7 +1425,7 @@ func  (this *testMainClass) TestRequestStatically(exchange ccxt.ICoreExchange, m
                 Dump("[INFO] STATIC REQUEST TEST:", method, ":", GetValue(data, "description"))
             }
             
-                {
+                {		
                      func(this *testMainClass) (ret_ interface{}) {
             		    defer func() {
                             if e := recover(); e != nil {
@@ -1456,7 +1456,7 @@ func  (this *testMainClass) TestRequestStatically(exchange ccxt.ICoreExchange, m
                 
                     }
             
-                {
+                {		
                      func(this *testMainClass) (ret_ interface{}) {
             		    defer func() {
                             if e := recover(); e != nil {
@@ -1497,7 +1497,7 @@ func  (this *testMainClass) TestResponseStatically(exchange ccxt.ICoreExchange, 
                 Dump("[INFO] STATIC RESPONSE TEST:", method, ":", GetValue(data, "description"))
             }
             
-                {
+                {		
                      func(this *testMainClass) (ret_ interface{}) {
             		    defer func() {
                             if e := recover(); e != nil {
@@ -1849,7 +1849,7 @@ func  (this *testMainClass) RunStaticTests(typeVar interface{}, optionalArgs ...
                 }
             }
             
-                {
+                {		
                      func(this *testMainClass) (ret_ interface{}) {
             		    defer func() {
                             if e := recover(); e != nil {
@@ -1946,7 +1946,7 @@ func  (this *testMainClass) TestBinance() <- chan interface{} {
         var inverseSwapId interface{} = "x-xcKtGhcu"
         var spotOrderRequest interface{} = nil
         
-            {
+            {		
                  func(this *testMainClass) (ret_ interface{}) {
         		    defer func() {
                         if e := recover(); e != nil {
@@ -1973,7 +1973,7 @@ func  (this *testMainClass) TestBinance() <- chan interface{} {
         Assert(StartsWith(clientOrderId, spotIdString), Add(Add(Add("binance - spot clientOrderId: ", clientOrderId), " does not start with spotId"), spotIdString))
         var swapOrderRequest interface{} = nil
         
-            {
+            {		
                  func(this *testMainClass) (ret_ interface{}) {
         		    defer func() {
                         if e := recover(); e != nil {
@@ -1997,7 +1997,7 @@ func  (this *testMainClass) TestBinance() <- chan interface{} {
                 }
         var swapInverseOrderRequest interface{} = nil
         
-            {
+            {		
                  func(this *testMainClass) (ret_ interface{}) {
         		    defer func() {
                         if e := recover(); e != nil {
@@ -2028,7 +2028,7 @@ func  (this *testMainClass) TestBinance() <- chan interface{} {
         Assert(StartsWith(clientOrderIdInverse, inverseSwapId), Add(Add(Add("binance - swap clientOrderIdInverse: ", clientOrderIdInverse), " does not start with swapId"), inverseSwapId))
         var createOrdersRequest interface{} = nil
         
-            {
+            {		
                  func(this *testMainClass) (ret_ interface{}) {
         		    defer func() {
                         if e := recover(); e != nil {
@@ -2089,7 +2089,7 @@ func  (this *testMainClass) TestOkx() <- chan interface{} {
         var id interface{} = "6b9ad766b55dBCDE"
         var spotOrderRequest interface{} = nil
         
-            {
+            {		
                  func(this *testMainClass) (ret_ interface{}) {
         		    defer func() {
                         if e := recover(); e != nil {
@@ -2118,7 +2118,7 @@ func  (this *testMainClass) TestOkx() <- chan interface{} {
         Assert(IsEqual(spotTag, id), Add(Add(Add("okx - id: ", id), " different from spot tag: "), spotTag))
         var swapOrderRequest interface{} = nil
         
-            {
+            {		
                  func(this *testMainClass) (ret_ interface{}) {
         		    defer func() {
                         if e := recover(); e != nil {
@@ -2168,7 +2168,7 @@ func  (this *testMainClass) TestCryptocom() <- chan interface{} {
         PanicOnError(retRes17038)
         var request interface{} = nil
         
-            {
+            {		
                  func(this *testMainClass) (ret_ interface{}) {
         		    defer func() {
                         if e := recover(); e != nil {
@@ -2214,7 +2214,7 @@ func  (this *testMainClass) TestBybit() <- chan interface{} {
         var id interface{} = "CCXT"
         Assert(IsEqual(GetValue(exchange.GetOptions(), "brokerId"), id), "id not in options")
         
-            {
+            {		
                  func(this *testMainClass) (ret_ interface{}) {
         		    defer func() {
                         if e := recover(); e != nil {
@@ -2262,7 +2262,7 @@ func  (this *testMainClass) TestKucoin() <- chan interface{} {
         Assert(IsEqual(spotId, "ccxt"), Add(Add("kucoin - id: ", spotId), " not in options"))
         Assert(IsEqual(spotKey, "9e58cc35-5b5e-4133-92ec-166e3f077cb8"), Add(Add("kucoin - key: ", spotKey), " not in options."))
         
-            {
+            {		
                  func(this *testMainClass) (ret_ interface{}) {
         		    defer func() {
                         if e := recover(); e != nil {
@@ -2312,7 +2312,7 @@ func  (this *testMainClass) TestKucoinfutures() <- chan interface{} {
         Assert(IsEqual(futureId, id), Add(Add("kucoinfutures - id: ", futureId), " not in options."))
         Assert(IsEqual(futureKey, "1b327198-f30c-4f14-a0ac-918871282f15"), Add(Add("kucoinfutures - key: ", futureKey), " not in options."))
         
-            {
+            {		
                  func(this *testMainClass) (ret_ interface{}) {
         		    defer func() {
                         if e := recover(); e != nil {
@@ -2357,7 +2357,7 @@ func  (this *testMainClass) TestBitget() <- chan interface{} {
         var id interface{} = "p4sve"
         Assert(IsEqual(GetValue(exchange.GetOptions(), "broker"), id), Add(Add("bitget - id: ", id), " not in options"))
         
-            {
+            {		
                  func(this *testMainClass) (ret_ interface{}) {
         		    defer func() {
                         if e := recover(); e != nil {
@@ -2405,7 +2405,7 @@ func  (this *testMainClass) TestMexc() <- chan interface{} {
         retRes17998 := (<-exchange.LoadMarkets())
         PanicOnError(retRes17998)
         
-            {
+            {		
                  func(this *testMainClass) (ret_ interface{}) {
         		    defer func() {
                         if e := recover(); e != nil {
@@ -2450,7 +2450,7 @@ func  (this *testMainClass) TestHtx() <- chan interface{} {
         var id interface{} = "AA03022abc"
         var spotOrderRequest interface{} = nil
         
-            {
+            {		
                  func(this *testMainClass) (ret_ interface{}) {
         		    defer func() {
                         if e := recover(); e != nil {
@@ -2478,7 +2478,7 @@ func  (this *testMainClass) TestHtx() <- chan interface{} {
         // swap test
         var swapOrderRequest interface{} = nil
         
-            {
+            {		
                  func(this *testMainClass) (ret_ interface{}) {
         		    defer func() {
                         if e := recover(); e != nil {
@@ -2502,7 +2502,7 @@ func  (this *testMainClass) TestHtx() <- chan interface{} {
                 }
         var swapInverseOrderRequest interface{} = nil
         
-            {
+            {		
                  func(this *testMainClass) (ret_ interface{}) {
         		    defer func() {
                         if e := recover(); e != nil {
@@ -2550,7 +2550,7 @@ func  (this *testMainClass) TestWoo() <- chan interface{} {
         var id interface{} = "bc830de7-50f3-460b-9ee0-f430f83f9dad"
         var spotOrderRequest interface{} = nil
         
-            {
+            {		
                  func(this *testMainClass) (ret_ interface{}) {
         		    defer func() {
                         if e := recover(); e != nil {
@@ -2578,7 +2578,7 @@ func  (this *testMainClass) TestWoo() <- chan interface{} {
         // swap test
         var stopOrderRequest interface{} = nil
         
-            {
+            {		
                  func(this *testMainClass) (ret_ interface{}) {
         		    defer func() {
                         if e := recover(); e != nil {
@@ -2629,7 +2629,7 @@ func  (this *testMainClass) TestBitmart() <- chan interface{} {
         retRes18818 := (<-exchange.LoadMarkets())
         PanicOnError(retRes18818)
         
-            {
+            {		
                  func(this *testMainClass) (ret_ interface{}) {
         		    defer func() {
                         if e := recover(); e != nil {
@@ -2674,7 +2674,7 @@ func  (this *testMainClass) TestCoinex() <- chan interface{} {
         Assert(IsEqual(GetValue(exchange.GetOptions(), "brokerId"), id), Add(Add("coinex - id: ", id), " not in options"))
         var spotOrderRequest interface{} = nil
         
-            {
+            {		
                  func(this *testMainClass) (ret_ interface{}) {
         		    defer func() {
                         if e := recover(); e != nil {
@@ -2721,7 +2721,7 @@ func  (this *testMainClass) TestBingx() <- chan interface{} {
         var id interface{} = "CCXT"
         Assert(IsEqual(GetValue(exchange.GetOptions(), "broker"), id), Add(Add("bingx - id: ", id), " not in options"))
         
-            {
+            {		
                  func(this *testMainClass) (ret_ interface{}) {
         		    defer func() {
                         if e := recover(); e != nil {
@@ -2766,7 +2766,7 @@ func  (this *testMainClass) TestPhemex() <- chan interface{} {
         var id interface{} = "CCXT123456"
         var request interface{} = nil
         
-            {
+            {		
                  func(this *testMainClass) (ret_ interface{}) {
         		    defer func() {
                         if e := recover(); e != nil {
@@ -2812,7 +2812,7 @@ func  (this *testMainClass) TestBlofin() <- chan interface{} {
         var id interface{} = "ec6dd3a7dd982d0b"
         var request interface{} = nil
         
-            {
+            {		
                  func(this *testMainClass) (ret_ interface{}) {
         		    defer func() {
                         if e := recover(); e != nil {
@@ -2876,7 +2876,7 @@ func  (this *testMainClass) TestCoinbaseinternational() <- chan interface{} {
         Assert(IsEqual(GetValue(exchange.GetOptions(), "brokerId"), id), "id not in options")
         var request interface{} = nil
         
-            {
+            {		
                  func(this *testMainClass) (ret_ interface{}) {
         		    defer func() {
                         if e := recover(); e != nil {
@@ -2922,7 +2922,7 @@ func  (this *testMainClass) TestCoinbaseAdvanced() <- chan interface{} {
         Assert(IsEqual(GetValue(exchange.GetOptions(), "brokerId"), id), "id not in options")
         var request interface{} = nil
         
-            {
+            {		
                  func(this *testMainClass) (ret_ interface{}) {
         		    defer func() {
                         if e := recover(); e != nil {
@@ -2971,7 +2971,7 @@ func  (this *testMainClass) TestWoofiPro() <- chan interface{} {
         PanicOnError(retRes20258)
         var request interface{} = nil
         
-            {
+            {		
                  func(this *testMainClass) (ret_ interface{}) {
         		    defer func() {
                         if e := recover(); e != nil {
@@ -3020,7 +3020,7 @@ func  (this *testMainClass) TestOxfun() <- chan interface{} {
         PanicOnError(retRes20448)
         var request interface{} = nil
         
-            {
+            {		
                  func(this *testMainClass) (ret_ interface{}) {
         		    defer func() {
                         if e := recover(); e != nil {
@@ -3062,7 +3062,7 @@ func  (this *testMainClass) TestXT() <- chan interface{} {
         var id interface{} = "CCXT"
         var spotOrderRequest interface{} = nil
         
-            {
+            {		
                  func(this *testMainClass) (ret_ interface{}) {
         		    defer func() {
                         if e := recover(); e != nil {
@@ -3088,7 +3088,7 @@ func  (this *testMainClass) TestXT() <- chan interface{} {
         Assert(IsEqual(spotMedia, id), Add(Add(Add("xt - id: ", id), " different from swap tag: "), spotMedia))
         var swapOrderRequest interface{} = nil
         
-            {
+            {		
                  func(this *testMainClass) (ret_ interface{}) {
         		    defer func() {
                         if e := recover(); e != nil {
@@ -3164,7 +3164,7 @@ func  (this *testMainClass) TestParadex() <- chan interface{} {
         retRes20938 := (<-exchange.LoadMarkets())
         PanicOnError(retRes20938)
         
-            {
+            {		
                  func(this *testMainClass) (ret_ interface{}) {
         		    defer func() {
                         if e := recover(); e != nil {
@@ -3208,7 +3208,7 @@ func  (this *testMainClass) TestHashkey() <- chan interface{} {
         var reqHeaders interface{} = nil
         var id interface{} = "10000700011"
         
-            {
+            {		
                  func(this *testMainClass) (ret_ interface{}) {
         		    defer func() {
                         if e := recover(); e != nil {
@@ -3253,7 +3253,7 @@ func  (this *testMainClass) TestCoincatch() <- chan interface{} {
         var reqHeaders interface{} = nil
         var id interface{} = "47cfy"
         
-            {
+            {		
                  func(this *testMainClass) (ret_ interface{}) {
         		    defer func() {
                         if e := recover(); e != nil {
@@ -3297,7 +3297,7 @@ func  (this *testMainClass) TestDefx() <- chan interface{} {
                 var exchange ccxt.ICoreExchange = this.InitOfflineExchange("defx")
         var reqHeaders interface{} = nil
         
-            {
+            {		
                  func(this *testMainClass) (ret_ interface{}) {
         		    defer func() {
                         if e := recover(); e != nil {
@@ -3342,7 +3342,7 @@ func  (this *testMainClass) TestCryptomus() <- chan interface{} {
                 var exchange ccxt.ICoreExchange = this.InitOfflineExchange("cryptomus")
         var request interface{} = nil
         
-            {
+            {		
                  func(this *testMainClass) (ret_ interface{}) {
         		    defer func() {
                         if e := recover(); e != nil {
@@ -3388,7 +3388,7 @@ func  (this *testMainClass) TestDerive() <- chan interface{} {
         Assert(IsEqual(GetValue(exchange.GetOptions(), "id"), id), Add(Add("derive - id: ", id), " not in options"))
         var request interface{} = nil
         
-            {
+            {		
                  func(this *testMainClass) (ret_ interface{}) {
         		    defer func() {
                         if e := recover(); e != nil {
@@ -3443,7 +3443,7 @@ func  (this *testMainClass) TestModeTrade() <- chan interface{} {
         PanicOnError(retRes22028)
         var request interface{} = nil
         
-            {
+            {		
                  func(this *testMainClass) (ret_ interface{}) {
         		    defer func() {
                         if e := recover(); e != nil {
@@ -3490,7 +3490,7 @@ func  (this *testMainClass) TestBackpack() <- chan interface{} {
         var reqHeaders interface{} = nil
         var id interface{} = "1400"
         
-            {
+            {		
                  func(this *testMainClass) (ret_ interface{}) {
         		    defer func() {
                         if e := recover(); e != nil {

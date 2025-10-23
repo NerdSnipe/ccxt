@@ -107,7 +107,7 @@ func  (this *KucoinCore) NegotiateHelper(privateChannel interface{}, optionalArg
             var response interface{} = nil
             var connectId interface{} = ccxt.Ternary(ccxt.IsTrue(privateChannel), "private", "public")
             
-                {
+                {		
                      func(this *KucoinCore) (ret_ interface{}) {
             		    defer func() {
                             if e := recover(); e != nil {

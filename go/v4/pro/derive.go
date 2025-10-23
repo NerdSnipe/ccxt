@@ -825,7 +825,7 @@ func  (this *DeriveCore) HandleErrorMessage(client interface{}, message interfac
     var errorMessage interface{} = this.SafeDict(message, "error")
     var errorCode interface{} = this.SafeString(errorMessage, "code")
     
-        {
+        {		
             ret__ := func(this *DeriveCore) (ret_ interface{}) {
     		    defer func() {
                     if error := recover(); error != nil {

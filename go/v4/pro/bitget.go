@@ -2988,7 +2988,7 @@ func  (this *BitgetCore) HandleErrorMessage(client interface{}, message interfac
     //
     var event interface{} = this.SafeString(message, "event")
     
-        {
+        {		
             ret__ := func(this *BitgetCore) (ret_ interface{}) {
     		    defer func() {
                     if e := recover(); e != nil {

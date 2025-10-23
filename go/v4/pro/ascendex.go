@@ -928,7 +928,7 @@ func  (this *AscendexCore) HandleErrorMessage(client interface{}, message interf
     //
     var errorCode interface{} = this.SafeInteger(message, "code")
     
-        {
+        {		
             ret__ := func(this *AscendexCore) (ret_ interface{}) {
     		    defer func() {
                     if e := recover(); e != nil {
@@ -1185,7 +1185,7 @@ func  (this *AscendexCore) Pong(client interface{}, message interface{}) <- chan
                 defer close(ch)
                 defer ccxt.ReturnPanicError(ch)
                     
-                {
+                {		
                      func(this *AscendexCore) (ret_ interface{}) {
             		    defer func() {
                             if e := recover(); e != nil {

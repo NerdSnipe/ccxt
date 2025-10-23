@@ -1144,7 +1144,7 @@ func  (this *CoinbaseexchangeCore) HandleErrorMessage(client interface{}, messag
     var errMsg interface{} = this.SafeString(message, "message")
     var reason interface{} = this.SafeString(message, "reason")
     
-        {
+        {		
             ret__ := func(this *CoinbaseexchangeCore) (ret_ interface{}) {
     		    defer func() {
                     if error := recover(); error != nil {

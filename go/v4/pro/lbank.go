@@ -1058,7 +1058,7 @@ func  (this *LbankCore) HandlePing(client interface{}, message interface{}) <- c
             //
             var pingId interface{} = this.SafeString(message, "ping")
             
-                {
+                {		
                      func(this *LbankCore) (ret_ interface{}) {
             		    defer func() {
                             if e := recover(); e != nil {

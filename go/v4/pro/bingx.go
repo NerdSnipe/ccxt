@@ -1406,7 +1406,7 @@ func  (this *BingxCore) HandleErrorMessage(client interface{}, message interface
     // }
     var code interface{} = this.SafeString(message, "code")
     
-        {
+        {		
              func(this *BingxCore) (ret_ interface{}) {
     		    defer func() {
                     if e := recover(); e != nil {
@@ -1444,7 +1444,7 @@ func  (this *BingxCore) KeepAliveListenKey(optionalArgs ...interface{}) <- chan 
                 return nil
             }
             
-                {
+                {		
                      func(this *BingxCore) (ret_ interface{}) {
             		    defer func() {
                             if error := recover(); error != nil {
@@ -1517,7 +1517,7 @@ func  (this *BingxCore) Pong(client interface{}, message interface{}) <- chan in
                 defer close(ch)
                 defer ccxt.ReturnPanicError(ch)
                     
-                {
+                {		
                      func(this *BingxCore) (ret_ interface{}) {
             		    defer func() {
                             if e := recover(); e != nil {

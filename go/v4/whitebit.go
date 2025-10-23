@@ -1385,7 +1385,7 @@ func  (this *WhitebitCore) FetchOrder(id interface{}, optionalArgs ...interface{
             // Try active orders first (if enabled)
             if IsTrue(checkActive) {
                 
-                    {
+                    {		
                          func(this *WhitebitCore) (ret_ interface{}) {
                 		    defer func() {
                                 if error := recover(); error != nil {
@@ -1425,7 +1425,7 @@ func  (this *WhitebitCore) FetchOrder(id interface{}, optionalArgs ...interface{
             // Try executed orders (if enabled)
             if IsTrue(checkExecuted) {
                 
-                    {
+                    {		
                          func(this *WhitebitCore) (ret_ interface{}) {
                 		    defer func() {
                                 if error := recover(); error != nil {

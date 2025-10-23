@@ -82,6 +82,9 @@ func CreateExchange(exchangeId string, options map[string]interface{}) ccxt.IExc
     case "blofin":
         itf := NewBlofin(options)
         return itf
+    case "btse":
+        itf := NewBtse(options)
+        return itf
     case "bybit":
         itf := NewBybit(options)
         return itf

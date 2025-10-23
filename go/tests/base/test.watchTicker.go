@@ -17,14 +17,14 @@ import "github.com/ccxt/ccxt/go/v4"
                     var response interface{} = nil
                     var success interface{} = true
                     
-                        {
-                             func() (ret_ interface{}) {
+                        {		
+                             func(this *undefined) (ret_ interface{}) {
                     		    defer func() {
                                     if e := recover(); e != nil {
                                         if e == "break" {
                                             return
                                         }
-                                        ret_ = func() interface{} {
+                                        ret_ = func(this *undefined) interface{} {
                                             // catch block:
                                                         if !IsTrue(IsTemporaryFailure(e)) {
                                     panic(e)
@@ -33,7 +33,7 @@ import "github.com/ccxt/ccxt/go/v4"
                                 // continue;
                                 success = false
                                             return nil
-                                        }()
+                                        }(this)
                                     }
                                 }()
                     		    // try block:
@@ -41,7 +41,7 @@ import "github.com/ccxt/ccxt/go/v4"
                         response = (UnWrapType(<-exchange.WatchTicker(symbol)))
                                     PanicOnError(response)
                     		    return nil
-                    	    }()
+                    	    }(this)
                         
                             }
                     if IsTrue(IsEqual(success, true)) {

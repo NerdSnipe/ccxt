@@ -34,14 +34,14 @@ import "github.com/ccxt/ccxt/go/v4"
                     var success interface{} = true
                     var shouldReturn interface{} = false
                     
-                        {
-                             func() (ret_ interface{}) {
+                        {		
+                             func(this *undefined) (ret_ interface{}) {
                     		    defer func() {
                                     if e := recover(); e != nil {
                                         if e == "break" {
                                             return
                                         }
-                                        ret_ = func() interface{} {
+                                        ret_ = func(this *undefined) interface{} {
                                             // catch block:
                                                         // for some exchanges, specifically watchTickers method not subscribe
                                 // to "all tickers" itself, and it requires symbols to be set
@@ -59,7 +59,7 @@ import "github.com/ccxt/ccxt/go/v4"
                                 // continue;
                                 success = false
                                             return nil
-                                        }()
+                                        }(this)
                                     }
                                 }()
                     		    // try block:
@@ -67,7 +67,7 @@ import "github.com/ccxt/ccxt/go/v4"
                         response = (UnWrapType(<-exchange.WatchTickers(argSymbols, argParams)))
                                     PanicOnError(response)
                     		    return nil
-                    	    }()
+                    	    }(this)
                         
                             }
                     if IsTrue(shouldReturn) {

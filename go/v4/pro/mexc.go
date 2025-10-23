@@ -1008,7 +1008,7 @@ func  (this *MexcCore) HandleOrderBook(client interface{}, message interface{}) 
         return
     }
     
-        {
+        {		
              func(this *MexcCore) (ret_ interface{}) {
     		    defer func() {
                     if e := recover(); e != nil {
@@ -2188,7 +2188,7 @@ func  (this *MexcCore) KeepAliveListenKey(listenKey interface{}, optionalArgs ..
                 "listenKey": listenKey,
             }
             
-                {
+                {		
                      func(this *MexcCore) (ret_ interface{}) {
             		    defer func() {
                             if error := recover(); error != nil {

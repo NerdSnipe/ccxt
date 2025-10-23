@@ -69,7 +69,7 @@ func  (this *CryptocomCore) Pong(client interface{}, message interface{}) <- cha
                 defer close(ch)
                 defer ccxt.ReturnPanicError(ch)
                     
-                {
+                {		
                      func(this *CryptocomCore) (ret_ interface{}) {
             		    defer func() {
                             if e := recover(); e != nil {
@@ -1776,7 +1776,7 @@ func  (this *CryptocomCore) HandleErrorMessage(client interface{}, message inter
     var id interface{} = this.SafeString(message, "id")
     var errorCode interface{} = this.SafeString(message, "code")
     
-        {
+        {		
             ret__ := func(this *CryptocomCore) (ret_ interface{}) {
     		    defer func() {
                     if e := recover(); e != nil {

@@ -2459,7 +2459,7 @@ func  (this *CoinbaseexchangeCore) Sign(path interface{}, optionalArgs ...interf
         var what interface{} = Add(Add(Add(nonce, method), request), payload)
         var secret interface{} = nil
         
-            {
+            {		
                  func(this *CoinbaseexchangeCore) (ret_ interface{}) {
         		    defer func() {
                         if e := recover(); e != nil {

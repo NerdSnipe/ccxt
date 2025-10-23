@@ -1717,7 +1717,7 @@ func  (this *CoinbaseCore) FetchMarketsV3(optionalArgs ...interface{}) <- chan i
             //
             var unresolvedContractPromises interface{} = []interface{}{}
             
-                {
+                {		
                      func(this *CoinbaseCore) (ret_ interface{}) {
             		    defer func() {
                             if e := recover(); e != nil {
@@ -1747,7 +1747,7 @@ func  (this *CoinbaseCore) FetchMarketsV3(optionalArgs ...interface{}) <- chan i
             PanicOnError(promises)
             var contractPromises interface{} = nil
             
-                {
+                {		
                      func(this *CoinbaseCore) (ret_ interface{}) {
             		    defer func() {
                             if e := recover(); e != nil {

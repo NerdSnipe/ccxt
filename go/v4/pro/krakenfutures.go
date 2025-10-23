@@ -1791,7 +1791,7 @@ func  (this *KrakenfuturesCore) HandleErrorMessage(client interface{}, message i
     //
     var errMsg interface{} = this.SafeString(message, "message")
     
-        {
+        {		
             ret__ := func(this *KrakenfuturesCore) (ret_ interface{}) {
     		    defer func() {
                     if error := recover(); error != nil {

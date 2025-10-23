@@ -30,14 +30,14 @@ import "github.com/ccxt/ccxt/go/v4"
                 // First, we need to subscribe to positions to test the unsubscribe functionality
                 var positionsSubscription interface{} = nil
                 
-                    {
-                         func() (ret_ interface{}) {
+                    {		
+                         func(this *undefined) (ret_ interface{}) {
                 		    defer func() {
                                 if e := recover(); e != nil {
                                     if e == "break" {
                                         return
                                     }
-                                    ret_ = func() interface{} {
+                                    ret_ = func(this *undefined) interface{} {
                                         // catch block:
                                                 if !IsTrue(IsTemporaryFailure(e)) {
                             panic(e)
@@ -47,7 +47,7 @@ import "github.com/ccxt/ccxt/go/v4"
                 ch <- false
                         return nil
                                         
-                                    }()
+                                    }(this)
                                 }
                             }()
                 		    // try block:
@@ -62,7 +62,7 @@ import "github.com/ccxt/ccxt/go/v4"
                     positionsSubscription = (UnWrapType(<-exchange.WatchPositions()))
                             PanicOnError(positionsSubscription)
                 		    return nil
-                	    }()
+                	    }(this)
                     
                         }
                 // Verify that we have a subscription
@@ -70,18 +70,18 @@ import "github.com/ccxt/ccxt/go/v4"
                 // Assert unWatchPositions for one symbol is not supported
                 var errorResponse interface{} = nil
                 
-                    {
-                         func() (ret_ interface{}) {
+                    {		
+                         func(this *undefined) (ret_ interface{}) {
                 		    defer func() {
                                 if e := recover(); e != nil {
                                     if e == "break" {
                                         return
                                     }
-                                    ret_ = func() interface{} {
+                                    ret_ = func(this *undefined) interface{} {
                                         // catch block:
                                                 errorResponse = e
                                         return nil
-                                    }()
+                                    }(this)
                                 }
                             }()
                 		    // try block:
@@ -89,28 +89,28 @@ import "github.com/ccxt/ccxt/go/v4"
                     errorResponse = (<-exchange.UnWatchPositions([]interface{}{symbol}))
                             PanicOnError(errorResponse)
                 		    return nil
-                	    }()
+                	    }(this)
                     
                         }
                 Assert(!IsEqual(errorResponse, nil), Add(Add(Add(Add(exchange.GetId(), " "), method), " must throw an error when unwatching a specific symbol, returned "), exchange.Json(errorResponse)))
                 // Test unwatching all positions (without specific symbols)
                 var responseAll interface{} = nil
                 
-                    {
-                         func() (ret_ interface{}) {
+                    {		
+                         func(this *undefined) (ret_ interface{}) {
                 		    defer func() {
                                 if e := recover(); e != nil {
                                     if e == "break" {
                                         return
                                     }
-                                    ret_ = func() interface{} {
+                                    ret_ = func(this *undefined) interface{} {
                                         // catch block:
                                                 if !IsTrue(IsTemporaryFailure(e)) {
                             panic(e)
                         }
                         panic(e)
                                         
-                                    }()
+                                    }(this)
                                 }
                             }()
                 		    // try block:
@@ -118,7 +118,7 @@ import "github.com/ccxt/ccxt/go/v4"
                     responseAll = (<-exchange.UnWatchPositions())
                             PanicOnError(responseAll)
                 		    return nil
-                	    }()
+                	    }(this)
                     
                         }
                 // Verify the response for unwatching all positions
@@ -126,21 +126,21 @@ import "github.com/ccxt/ccxt/go/v4"
                 // Test that we can resubscribe after unwatching (to ensure cleanup was proper)
                 var resubscribeResponse interface{} = nil
                 
-                    {
-                         func() (ret_ interface{}) {
+                    {		
+                         func(this *undefined) (ret_ interface{}) {
                 		    defer func() {
                                 if e := recover(); e != nil {
                                     if e == "break" {
                                         return
                                     }
-                                    ret_ = func() interface{} {
+                                    ret_ = func(this *undefined) interface{} {
                                         // catch block:
                                                 if !IsTrue(IsTemporaryFailure(e)) {
                             panic(e)
                         }
                         panic(Error(Add(Add(Add(exchange.GetId(), " "), method), " failed to resubscribe after unwatch, indicating potential cleanup issues")))
                                         
-                                    }()
+                                    }(this)
                                 }
                             }()
                 		    // try block:
@@ -152,7 +152,7 @@ import "github.com/ccxt/ccxt/go/v4"
                     resubscribeResponse = (UnWrapType(<-exchange.WatchPositions()))
                             PanicOnError(resubscribeResponse)
                 		    return nil
-                	    }()
+                	    }(this)
                     
                         }
                 // Verify resubscription works

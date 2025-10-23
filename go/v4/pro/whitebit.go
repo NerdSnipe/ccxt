@@ -1074,7 +1074,7 @@ func  (this *WhitebitCore) Authenticate(optionalArgs ...interface{}) <- chan int
                     "method": this.HandleAuthenticate,
                 }
                 
-                    {
+                    {		
                          func(this *WhitebitCore) (ret_ interface{}) {
                 		    defer func() {
                                 if e := recover(); e != nil {
@@ -1125,7 +1125,7 @@ func  (this *WhitebitCore) HandleErrorMessage(client interface{}, message interf
     //
     var error interface{} = this.SafeValue(message, "error")
     
-        {
+        {		
              func(this *WhitebitCore) (ret_ interface{}) {
     		    defer func() {
                     if e := recover(); e != nil {

@@ -2179,7 +2179,7 @@ func  (this *GateCore) HandleErrorMessage(client interface{}, message interface{
     if ccxt.IsTrue(!ccxt.IsEqual(error, nil)) {
         var messageHash interface{} = this.SafeString(client.(ccxt.ClientInterface).GetSubscriptions(), id)
         
-            {
+            {		
                  func(this *GateCore) (ret_ interface{}) {
         		    defer func() {
                         if e := recover(); e != nil {

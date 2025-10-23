@@ -446,7 +446,7 @@ func  (this *BithumbCore) HandleErrorMessage(client interface{}, message interfa
     }
     var errorCode interface{} = this.SafeString(message, "status")
     
-        {
+        {		
              func(this *BithumbCore) (ret_ interface{}) {
     		    defer func() {
                     if e := recover(); e != nil {

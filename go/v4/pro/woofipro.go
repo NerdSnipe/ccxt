@@ -1499,7 +1499,7 @@ func  (this *WoofiproCore) HandleErrorMessage(client interface{}, message interf
     }
     var errorMessage interface{} = this.SafeString(message, "errorMsg")
     
-        {
+        {		
             ret__ := func(this *WoofiproCore) (ret_ interface{}) {
     		    defer func() {
                     if error := recover(); error != nil {

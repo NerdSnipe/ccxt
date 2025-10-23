@@ -969,7 +969,7 @@ func  (this *CoinbaseinternationalCore) HandleErrorMessage(client interface{}, m
     var reason interface{} = this.SafeString(message, "reason")
     var errMsg interface{} = this.SafeString(message, "message")
     
-        {
+        {		
              func(this *CoinbaseinternationalCore) (ret_ interface{}) {
     		    defer func() {
                     if e := recover(); e != nil {

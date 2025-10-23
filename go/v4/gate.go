@@ -1024,7 +1024,7 @@ func  (this *GateCore) LoadUnifiedStatus(optionalArgs ...interface{}) <- chan in
             var unifiedAccount interface{} = this.SafeBool(this.Options, "unifiedAccount")
             if IsTrue(IsEqual(unifiedAccount, nil)) {
                 
-                    {
+                    {		
                          func(this *GateCore) (ret_ interface{}) {
                 		    defer func() {
                                 if e := recover(); e != nil {

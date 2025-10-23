@@ -39,6 +39,7 @@ var btcalpha = require('./src/btcalpha.js');
 var btcbox = require('./src/btcbox.js');
 var btcmarkets = require('./src/btcmarkets.js');
 var btcturk = require('./src/btcturk.js');
+var btse = require('./src/btse.js');
 var bybit = require('./src/bybit.js');
 var cex = require('./src/cex.js');
 var coinbase = require('./src/coinbase.js');
@@ -133,6 +134,7 @@ var bittrade$1 = require('./src/pro/bittrade.js');
 var bitvavo$1 = require('./src/pro/bitvavo.js');
 var blockchaincom$1 = require('./src/pro/blockchaincom.js');
 var blofin$1 = require('./src/pro/blofin.js');
+var btse$1 = require('./src/pro/btse.js');
 var bybit$1 = require('./src/pro/bybit.js');
 var cex$1 = require('./src/pro/cex.js');
 var coinbase$1 = require('./src/pro/coinbase.js');
@@ -223,6 +225,7 @@ const exchanges = {
     'btcbox': btcbox["default"],
     'btcmarkets': btcmarkets["default"],
     'btcturk': btcturk["default"],
+    'btse': btse["default"],
     'bybit': bybit["default"],
     'cex': cex["default"],
     'coinbase': coinbase["default"],
@@ -319,6 +322,7 @@ const pro = {
     'bitvavo': bitvavo$1["default"],
     'blockchaincom': blockchaincom$1["default"],
     'blofin': blofin$1["default"],
+    'btse': btse$1["default"],
     'bybit': bybit$1["default"],
     'cex': cex$1["default"],
     'coinbase': coinbase$1["default"],
@@ -454,6 +458,7 @@ exports.btcalpha = btcalpha["default"];
 exports.btcbox = btcbox["default"];
 exports.btcmarkets = btcmarkets["default"];
 exports.btcturk = btcturk["default"];
+exports.btse = btse["default"];
 exports.bybit = bybit["default"];
 exports.cex = cex["default"];
 exports.coinbase = coinbase["default"];

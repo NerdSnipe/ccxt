@@ -1144,7 +1144,7 @@ func  (this *ApexCore) HandleErrorMessage(client interface{}, message interface{
     //
     var code interface{} = this.SafeStringN(message, []interface{}{"code", "ret_code", "retCode"})
     
-        {
+        {		
             ret__ := func(this *ApexCore) (ret_ interface{}) {
     		    defer func() {
                     if error := recover(); error != nil {
@@ -1254,7 +1254,7 @@ func  (this *ApexCore) Pong(client interface{}, message interface{}) <- chan int
             //
             var timeStamp interface{} = this.Milliseconds()
             
-                {
+                {		
                      func(this *ApexCore) (ret_ interface{}) {
             		    defer func() {
                             if e := recover(); e != nil {

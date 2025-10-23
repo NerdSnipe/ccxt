@@ -12242,7 +12242,7 @@ func  (this *BinanceCore) SetMarginMode(marginMode interface{}, optionalArgs ...
             }
             var response interface{} = nil
             
-                {
+                {		
                      func(this *BinanceCore) (ret_ interface{}) {
             		    defer func() {
                             if e := recover(); e != nil {
@@ -13234,7 +13234,7 @@ func  (this *BinanceCore) HandleErrors(code interface{}, reason interface{}, url
         var parsedMessage interface{} = nil
         if IsTrue(!IsEqual(messageNew, nil)) {
             
-                {
+                {		
                      func(this *BinanceCore) (ret_ interface{}) {
             		    defer func() {
                             if e := recover(); e != nil {

@@ -532,7 +532,7 @@ func  (this *CryptocomCore) FetchCurrencies(optionalArgs ...interface{}) <- chan
             }
             var response interface{} = map[string]interface{} {}
             
-                {
+                {		
                      func(this *CryptocomCore) (ret_ interface{}) {
             		    defer func() {
                             if e := recover(); e != nil {

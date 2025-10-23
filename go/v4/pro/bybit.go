@@ -2962,7 +2962,7 @@ func  (this *BybitCore) HandleErrorMessage(client interface{}, message interface
     //
     var code interface{} = this.SafeStringN(message, []interface{}{"code", "ret_code", "retCode"})
     
-        {
+        {		
             ret__ := func(this *BybitCore) (ret_ interface{}) {
     		    defer func() {
                     if error := recover(); error != nil {
